@@ -2,9 +2,11 @@
 //  NibView.swift
 //  PR Cards
 //
-//  Created by Ratheesh Mac Mini on 16/01/18.
-//  Copyright © 2018 PR Networks. All rights reserved.
+//  Created by Venu on 30/08/18.
+//  Copyright © 2018 Venu. All rights reserved.
 //
+
+
 
 import UIKit
 
