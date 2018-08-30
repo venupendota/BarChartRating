@@ -8,38 +8,51 @@
 
 import UIKit
 
-class SAInventoryProductReviewsHeader: UITableViewHeaderFooterView {
+class SAInventoryProductReviewsHeader: NibView {
     
-    static let identifier = "inventoryProductReviewsTableHeader"
-
-    @IBOutlet weak var barChart_tableView: UITableView!
-    @IBOutlet weak var totalRating_lbl: UILabel!
-    @IBOutlet weak var totalRatedCount_lbl: UILabel!
-    @IBOutlet weak var customerReviewsKey_lbl: UILabel!
-    @IBOutlet weak var rating_view: FloatRatingView!
+    fileprivate let cellNibName = "SAInventoryReviewsChartTableCell"
+    fileprivate let cellIdentifier = "barChartCell"
     
-    var numberOfRows = 5
+    @IBOutlet weak private var barChart_tableView: UITableView!
     
-    var key_array = ["5","4","3","2","1"]
-    var value_array = ["43,34,456","53,5676","89,989","234","9,09,90,323"]
-    var progress_array:[Float] = [80.0,50.0,70.0,50.0,20.0]
+    fileprivate var numberOfRows = 0
     
-    // MARK: - Apply Colors For UI
+    fileprivate var key_array:[String]?                 // Key Strings like  5  4  3  2  1
+    fileprivate var value_array:[String]?               // Value Strings like 3200 people given 5 rating, 5600 people given 4 rating ... etc
+    fileprivate lazy var progress_array = [Float]()     // Progress bar value to show the percentage...
+    fileprivate var colors_array:[UIColor]?             // Colors for each progress bar
     
-    private func applyColorsForUI() {
-        for lbl in [totalRating_lbl,totalRatedCount_lbl,customerReviewsKey_lbl] {
-            lbl?.textColor = UIColor(hexString: defaultTheme.SAProductDetailsVC_ReviewsHeader_customerRerview_text)
-        }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupThisHeaderView()
     }
     
-    func setupThisHeaderView() {
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setupThisHeaderView()
+    }
+
+    // MARK: - Setting up this View
+    
+    private func setupThisHeaderView() {
         
-        applyColorsForUI()
-        
+        numberOfRows = progress_array.count
         barChart_tableView.dataSource = self
         barChart_tableView.delegate = self
-        let cellNib = UINib(nibName: SAString.NibNames.SAInventoryReviewsChartTableCell, bundle: nil)
-        barChart_tableView.register(cellNib, forCellReuseIdentifier: SAString.CellIdentifier.inventoryReviewsChartTableCell)
+        let cellNib = UINib(nibName: cellNibName, bundle: nil)
+        barChart_tableView.register(cellNib, forCellReuseIdentifier: cellIdentifier)
+    }
+    
+    // Call this method from the Instance of this class
+    
+    public func barChartSetup(keys:[String]?,values:[String]?,progressValues:[Float],colors:[UIColor]) {
+        numberOfRows = progressValues.count
+        key_array = keys
+        value_array = values
+        progress_array = progressValues
+        colors_array = colors
+        barChart_tableView.reloadData()
     }
     
 }
@@ -51,49 +64,22 @@ extension SAInventoryProductReviewsHeader:UITableViewDataSource,UITableViewDeleg
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: SAString.CellIdentifier.inventoryReviewsChartTableCell) as? SAInventoryReviewsChartTableCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as? SAInventoryReviewsChartTableCell else {
             return UITableViewCell()
         }
         
-        cell.ratingKey_lbl.text = key_array[indexPath.row]
-        cell.ratingValue_lbl.text = value_array[indexPath.row]
+        cell.ratingKey_lbl.text = key_array?[indexPath.row] ?? ""
+        cell.ratingValue_lbl.text = value_array?[indexPath.row] ?? ""
         
         cell.rating_progressview.progress = progress_array[indexPath.row] / 100.0
         
-        colorVariationsForCells(indexPath, cell: cell)
+        cell.rating_progressview.progressTintColor = colors_array?[indexPath.row] ?? UIColor.white
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+
         return barChart_tableView.frame.size.height / CGFloat(numberOfRows)
     }
-    
-    // MARK: - Apply Colors
-    
-    private func colorVariationsForCells(_ indexPath:IndexPath, cell:SAInventoryReviewsChartTableCell) {
-        
-//        cell.rating_progressview.tintColor = UIColor.white
-        
-        switch indexPath.row {
-        case 0:
-            cell.rating_progressview.progressTintColor = UIColor(hexString: defaultTheme.BarChart_5_bar)
-            break
-        case 1:
-            cell.rating_progressview.progressTintColor = UIColor(hexString: defaultTheme.BarChart_4_bar)
-            break
-        case 2:
-            cell.rating_progressview.progressTintColor = UIColor(hexString: defaultTheme.BarChart_3_bar)
-            break
-        case 3:
-            cell.rating_progressview.progressTintColor = UIColor(hexString: defaultTheme.BarChart_2_bar)
-            break
-        case 4:
-            cell.rating_progressview.progressTintColor = UIColor(hexString: defaultTheme.BarChart_1_bar)
-            break
-        default:
-            break
-        }
-    }
-    
 }
