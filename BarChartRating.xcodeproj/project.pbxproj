@@ -12,10 +12,10 @@
 		2A0AAFFB2137E42D0035FA76 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A0AAFF92137E42D0035FA76 /* Main.storyboard */; };
 		2A0AAFFD2137E42E0035FA76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A0AAFFC2137E42E0035FA76 /* Assets.xcassets */; };
 		2A0AB0002137E42E0035FA76 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A0AAFFE2137E42E0035FA76 /* LaunchScreen.storyboard */; };
-		2A0AB00A2137E4CA0035FA76 /* SAInventoryProductReviewsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0AB0082137E4CA0035FA76 /* SAInventoryProductReviewsHeader.swift */; };
-		2A0AB00B2137E4CA0035FA76 /* SAInventoryProductReviewsHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A0AB0092137E4CA0035FA76 /* SAInventoryProductReviewsHeader.xib */; };
-		2A0AB00E2137E5520035FA76 /* SAInventoryReviewsChartTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0AB00C2137E5510035FA76 /* SAInventoryReviewsChartTableCell.swift */; };
-		2A0AB00F2137E5520035FA76 /* SAInventoryReviewsChartTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A0AB00D2137E5510035FA76 /* SAInventoryReviewsChartTableCell.xib */; };
+		2A0AB00A2137E4CA0035FA76 /* BarChartRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0AB0082137E4CA0035FA76 /* BarChartRatingView.swift */; };
+		2A0AB00B2137E4CA0035FA76 /* BarChartRatingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A0AB0092137E4CA0035FA76 /* BarChartRatingView.xib */; };
+		2A0AB00E2137E5520035FA76 /* BarChartRatingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0AB00C2137E5510035FA76 /* BarChartRatingTableViewCell.swift */; };
+		2A0AB00F2137E5520035FA76 /* BarChartRatingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A0AB00D2137E5510035FA76 /* BarChartRatingTableViewCell.xib */; };
 		2A0AB0112137EC290035FA76 /* NibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0AB0102137EC290035FA76 /* NibView.swift */; };
 		2A0AB0132137ED170035FA76 /* barChartStar.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A0AB0122137ED170035FA76 /* barChartStar.png */; };
 /* End PBXBuildFile section */
@@ -28,10 +28,10 @@
 		2A0AAFFC2137E42E0035FA76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A0AAFFF2137E42E0035FA76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2A0AB0012137E42E0035FA76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2A0AB0082137E4CA0035FA76 /* SAInventoryProductReviewsHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAInventoryProductReviewsHeader.swift; sourceTree = "<group>"; };
-		2A0AB0092137E4CA0035FA76 /* SAInventoryProductReviewsHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SAInventoryProductReviewsHeader.xib; sourceTree = "<group>"; };
-		2A0AB00C2137E5510035FA76 /* SAInventoryReviewsChartTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAInventoryReviewsChartTableCell.swift; sourceTree = "<group>"; };
-		2A0AB00D2137E5510035FA76 /* SAInventoryReviewsChartTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SAInventoryReviewsChartTableCell.xib; sourceTree = "<group>"; };
+		2A0AB0082137E4CA0035FA76 /* BarChartRatingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarChartRatingView.swift; sourceTree = "<group>"; };
+		2A0AB0092137E4CA0035FA76 /* BarChartRatingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BarChartRatingView.xib; sourceTree = "<group>"; };
+		2A0AB00C2137E5510035FA76 /* BarChartRatingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarChartRatingTableViewCell.swift; sourceTree = "<group>"; };
+		2A0AB00D2137E5510035FA76 /* BarChartRatingTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BarChartRatingTableViewCell.xib; sourceTree = "<group>"; };
 		2A0AB0102137EC290035FA76 /* NibView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibView.swift; sourceTree = "<group>"; };
 		2A0AB0122137ED170035FA76 /* barChartStar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = barChartStar.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -82,10 +82,10 @@
 			children = (
 				2A0AB0122137ED170035FA76 /* barChartStar.png */,
 				2A0AB0102137EC290035FA76 /* NibView.swift */,
-				2A0AB0082137E4CA0035FA76 /* SAInventoryProductReviewsHeader.swift */,
-				2A0AB0092137E4CA0035FA76 /* SAInventoryProductReviewsHeader.xib */,
-				2A0AB00C2137E5510035FA76 /* SAInventoryReviewsChartTableCell.swift */,
-				2A0AB00D2137E5510035FA76 /* SAInventoryReviewsChartTableCell.xib */,
+				2A0AB0082137E4CA0035FA76 /* BarChartRatingView.swift */,
+				2A0AB0092137E4CA0035FA76 /* BarChartRatingView.xib */,
+				2A0AB00C2137E5510035FA76 /* BarChartRatingTableViewCell.swift */,
+				2A0AB00D2137E5510035FA76 /* BarChartRatingTableViewCell.xib */,
 			);
 			path = BarChartRatingSource;
 			sourceTree = "<group>";
@@ -149,10 +149,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A0AB0002137E42E0035FA76 /* LaunchScreen.storyboard in Resources */,
-				2A0AB00B2137E4CA0035FA76 /* SAInventoryProductReviewsHeader.xib in Resources */,
+				2A0AB00B2137E4CA0035FA76 /* BarChartRatingView.xib in Resources */,
 				2A0AAFFD2137E42E0035FA76 /* Assets.xcassets in Resources */,
 				2A0AB0132137ED170035FA76 /* barChartStar.png in Resources */,
-				2A0AB00F2137E5520035FA76 /* SAInventoryReviewsChartTableCell.xib in Resources */,
+				2A0AB00F2137E5520035FA76 /* BarChartRatingTableViewCell.xib in Resources */,
 				2A0AAFFB2137E42D0035FA76 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -165,8 +165,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A0AAFF82137E42D0035FA76 /* ViewController.swift in Sources */,
-				2A0AB00A2137E4CA0035FA76 /* SAInventoryProductReviewsHeader.swift in Sources */,
-				2A0AB00E2137E5520035FA76 /* SAInventoryReviewsChartTableCell.swift in Sources */,
+				2A0AB00A2137E4CA0035FA76 /* BarChartRatingView.swift in Sources */,
+				2A0AB00E2137E5520035FA76 /* BarChartRatingTableViewCell.swift in Sources */,
 				2A0AAFF62137E42D0035FA76 /* AppDelegate.swift in Sources */,
 				2A0AB0112137EC290035FA76 /* NibView.swift in Sources */,
 			);

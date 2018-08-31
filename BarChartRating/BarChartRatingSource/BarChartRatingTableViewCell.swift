@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SAInventoryReviewsChartTableCell: UITableViewCell {
+class BarChartRatingTableViewCell: UITableViewCell {
 
     @IBOutlet weak var ratingKey_lbl: UILabel!
     @IBOutlet weak var ratingValue_lbl: UILabel!

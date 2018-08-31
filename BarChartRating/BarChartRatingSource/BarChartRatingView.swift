@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SAInventoryProductReviewsHeader: NibView {
+class BarChartRatingView: NibView {
     
     fileprivate let cellNibName = "SAInventoryReviewsChartTableCell"
     fileprivate let cellIdentifier = "barChartCell"
@@ -57,14 +57,14 @@ class SAInventoryProductReviewsHeader: NibView {
     
 }
 
-extension SAInventoryProductReviewsHeader:UITableViewDataSource,UITableViewDelegate {
+extension BarChartRatingView:UITableViewDataSource,UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return numberOfRows
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as? SAInventoryReviewsChartTableCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as? BarChartRatingTableViewCell else {
             return UITableViewCell()
         }
         
