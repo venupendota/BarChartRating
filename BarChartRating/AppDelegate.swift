@@ -2,7 +2,8 @@
 //  AppDelegate.swift
 //  BarChartRating
 //
-//  Created by Venu on 30/08/18.
+//  Created and Maintained by Venu on 30/08/18.
+//  Follow me on https://github.com/venupendota/BarChartRating/edit/master/BarChartRating/
 //  Copyright © 2018 Venu. All rights reserved.
 //
 
